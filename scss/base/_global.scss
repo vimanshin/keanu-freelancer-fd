@@ -1,7 +1,7 @@
 @use '../abstracts/variables';
 
 body {
-  font-family: variables.$font-family-base;
+  font-family: variables.$font-base;
   font-size:   variables.$font-size-base;
   line-height: variables.$line-height-base;
   color:       variables.$color-text;

@@ -1,2 +1,23 @@
-// — Breakpoints —
+// ─── Цвета ───────────────────────────────────────────────────
+$color-text: #ffffff;
+$color-black: #000000;
+$color-bg: #1b2944; // основной фон страницы
+$color-bg-alt: #141f35; // фон секций features и gallery
+$color-accent: #ffbb01; // жёлтый — лейбл, CTA-кнопка
+$color-form-shadow: #ffc41d; // тень карточки формы
+$color-btn-red: #ec1f46; // кнопка «Посмотреть»
+$color-btn-red-shadow: #ce1c3e;
+$color-muted: #949494; // плейсхолдеры, политика
+$color-surface: #f8f8f8; // фон инпутов формы
+$color-text-dark: #1b2944; // текст на жёлтой кнопке
+
+// ─── Типографика ─────────────────────────────────────────────
+$font-base: 'Roboto', sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.75;
+
+// ─── Брейкпоинты ─────────────────────────────────────────────
 $bp-desktop: 1280px;
+
+// ─── Контейнер ───────────────────────────────────────────────
+$container-max-width: 944px;
