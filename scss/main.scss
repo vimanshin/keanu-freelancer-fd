@@ -2,9 +2,10 @@
 @use 'base/global';
 
 @use 'components/button';
+@use 'components/card';
 
 @use 'layout/header';
 @use 'layout/hero';
 @use 'layout/features';
-@use 'layout/card';
 @use 'layout/portfolio';
+@use 'layout/gallery';
