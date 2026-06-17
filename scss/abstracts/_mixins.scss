@@ -1,0 +1,7 @@
+@use 'variables';
+
+@mixin respond($bp) {
+  @if $bp == 'desktop' {
+    @media (min-width: variables.$bp-desktop) { @content; }
+  }
+}
