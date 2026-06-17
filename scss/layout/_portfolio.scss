@@ -1,0 +1,41 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.portfolio {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  &__title {
+    @include mixins.fluid(font-size, 19, 36);
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__list {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; // 32px mobile
+    list-style: none;
+  }
+
+  @include mixins.respond(desktop) {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+
+    &__title {
+      line-height: 116.667%;
+      margin-bottom: 3rem; // 48px — gap до списка на desktop
+    }
+
+    &__list {
+      flex-direction: row;
+      gap: 1rem; // 16px desktop
+      margin-top: 0; // сбрасываем mobile margin-top, теперь gap через title
+    }
+
+    &__item {
+      width: 19rem; // 304px (3 × 304 + 2 × 16 = 944px ✓)
+    }
+  }
+}
