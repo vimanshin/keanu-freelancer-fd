@@ -404,40 +404,25 @@
           <h2 class="contacts__title">Свяжитесь со мной</h2>
           <div class="contacts__body">
             <form class="form" action="#" method="post">
-              <h3 class="form__title">Написать мне</h3>
-              <p class="form__subtitle">
+              <h3 class="form__title">
                 Можете просто оставить заявку, я позвоню вам сегодня
-              </p>
+              </h3>
               <div class="form__fields">
                 <label class="visually-hidden" for="name">Ваше имя</label>
-                <input
-                  class="form__input"
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Ваше имя"
-                  autocomplete="name"
-                  required
-                />
-
+                <div class="form__field">
+                  <img class="form__field-icon" src="./assets/icons/icon-user.svg" alt="" aria-hidden="true" />
+                  <input class="form__input" type="text" id="name" name="name"
+                         placeholder="Ваше имя" autocomplete="name" required />
+                </div>
+              
                 <label class="visually-hidden" for="phone">Ваш телефон</label>
-                <input
-                  class="form__input"
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Ваш телефон"
-                  autocomplete="tel"
-                  required
-                />
+                <div class="form__field">
+                  <img class="form__field-icon" src="./assets/icons/icon-phone.svg" alt="" aria-hidden="true" />
+                  <input class="form__input" type="tel" id="phone" name="phone"
+                         placeholder="Ваш телефон" autocomplete="tel" required />
+                </div>
               </div>
-              <button class="btn btn--primary" type="submit">Отправить</button>
-              <p class="form__policy">
-                Нажимая кнопку, вы соглашаетесь с
-                <a class="form__policy-link" href="#"
-                  >политикой конфиденциальности</a
-                >
-              </p>
+              <button class="btn btn--primary" type="submit">Бесплатная консультация</button>
             </form>
 
             <div class="contacts__info">
@@ -454,7 +439,7 @@
                 >
               </div>
               <div class="contacts__group">
-                <h3 class="contacts__label">Соцсети</h3>
+                <h3 class="contacts__label visually-hidden">Соцсети</h3>
                 <nav class="contacts__social" aria-label="Социальные сети">
                   <a
                     class="contacts__social-link"
