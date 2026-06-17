@@ -1,0 +1,44 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.header {
+  padding-top: 2rem; // 32px mobile
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex; // убирает лишний gap под inline-элементом
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; // 8px mobile
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 1rem;  // 16px mobile
+      height: auto; // сохраняет пропорции SVG
+    }
+  }
+
+  @include mixins.respond(desktop) {
+    padding-top: 2.5rem; // 40px desktop
+
+    &__social {
+      gap: 1rem; // 16px desktop
+    }
+
+    &__social-link img {
+      width: 1.25rem; // 20px desktop
+    }
+  }
+}
