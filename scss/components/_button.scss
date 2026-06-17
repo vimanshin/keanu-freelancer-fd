@@ -17,30 +17,32 @@
 
 // ─── Жёлтая CTA ───────────────────────────────────────────────
 .btn--primary {
-  height: 2.75rem;           // 44px mobile
+  height: 2.75rem; // 44px mobile
   background-color: variables.$color-accent;
   color: variables.$color-text-dark;
-  font-size: 0.625rem;       // 10px mobile
+  font-size: 0.625rem; // 10px mobile
   text-transform: uppercase;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 0 #B68500;
 
   @include mixins.respond(desktop) {
-    height: 4.125rem;        // 66px desktop
-    font-size: 0.75rem;      // 12px desktop
+    height: 4.125rem; // 66px desktop
+    font-size: 0.75rem; // 12px desktop
   }
 }
 
 // ─── Красная «Посмотреть» ─────────────────────────────────────
 .btn--red {
-  width: 7.125rem;           // 114px mobile
-  height: 2rem;              // 32px mobile
+  width: 7.125rem; // 114px mobile
+  height: 2rem; // 32px mobile
   background-color: variables.$color-btn-red;
   color: variables.$color-text;
-  font-size: 0.75rem;        // 12px — не меняется
-  border-radius: 0.375rem;   // 6px
+  font-size: 0.75rem; // 12px — не меняется
+  border-radius: 0.375rem; // 6px
   box-shadow: 0 2px 0 variables.$color-btn-red-shadow;
 
   @include mixins.respond(desktop) {
-    width: 7.5rem;           // 120px desktop
-    height: 2.25rem;         // 36px desktop
+    width: 7.5rem; // 120px desktop
+    height: 2.25rem; // 36px desktop
   }
 }
