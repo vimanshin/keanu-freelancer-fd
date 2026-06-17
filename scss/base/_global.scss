@@ -1,9 +1,32 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.container {
+  max-width: variables.$container-max-width;
+  margin-inline: auto;
+  padding-inline: 1.5rem; // 24px — мобильный отступ
+
+  @include mixins.respond(desktop) {
+    padding-inline: 0; // на desktop центрирует margin-inline: auto
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 body {
   font-family: variables.$font-base;
-  font-size:   variables.$font-size-base;
+  font-size: variables.$font-size-base;
   line-height: variables.$line-height-base;
-  color:       variables.$color-text;
+  color: variables.$color-text;
   background-color: variables.$color-bg;
 }
