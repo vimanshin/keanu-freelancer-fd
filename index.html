@@ -3,12 +3,524 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Keanu freelancer</title>
+    <title>Петр Федоров — Фрилансер</title>
     <link rel="icon" href="./assets/icons/keanu-freelancer.ico" sizes="any" />
-    <link rel="icon" href="./assets/icons/keanu-freelancer.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="./assets/icons/keanu-freelancer.svg"
+      type="image/svg+xml"
+    />
     <link rel="apple-touch-icon" href="./assets/icons/keanu-freelancer.png" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- ─── HEADER ─────────────────────────────────────────── -->
+    <header class="header">
+      <div class="header__inner container">
+        <a class="header__logo" href="/" aria-label="Фрилансер — на главную">
+          <img
+            src="./assets/icons/logo.svg"
+            alt=""
+            width="100"
+            height="28"
+          />
+        </a>
+        <nav class="header__social" aria-label="Социальные сети">
+          <a
+            class="header__social-link"
+            href="#"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./assets/icons/social-github.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+          <a
+            class="header__social-link"
+            href="#"
+            aria-label="Twitter"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./assets/icons/social-twitter.svg"
+              alt=""
+              width="20"
+              height="16"
+            />
+          </a>
+          <a
+            class="header__social-link"
+            href="#"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./assets/icons/social-instagram.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+          <a
+            class="header__social-link"
+            href="#"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./assets/icons/social-facebook.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- ─── HERO ───────────────────────────────────────────── -->
+      <section class="hero">
+        <div class="hero__inner container">
+          <img
+            class="hero__avatar"
+            src="./assets/images/hero-portrait.png"
+            alt="Петр Федоров — фрилансер"
+            width="110"
+            height="110"
+          />
+          <div class="hero__text">
+            <div class="hero__name-block">
+              <span class="hero__label">Фрилансер</span>
+              <h1 class="hero__name">Петр Федоров</h1>
+            </div>
+            <p class="hero__description">
+              Разрабатываю сайты для малого и среднего бизнеса. У меня можно
+              заказать дизайн и верстку небольшого сайта или интернет-магазина
+            </p>
+            <a class="btn btn--primary" href="#contacts">Написать мне</a>
+          </div>
+        </div>
+      </section>
+      <!-- ─── FEATURES ───────────────────────────────────────── -->
+      <section class="features">
+        <div class="features__inner container">
+          <h2 class="features__title">Со мной удобно работать</h2>
+          <ul class="features__list">
+            <li class="features__item">
+              <img
+                class="features__icon"
+                src="./assets/icons/icon-offer.svg"
+                alt=""
+                width="52"
+                height="52"
+              />
+              <h3 class="features__item-title">По договору</h3>
+              <p class="features__item-text">
+                Предоставлю все документы для бухгалтерии: договоры, счета и
+                акты. Работаю как ИП без НДС.
+              </p>
+            </li>
+
+            <li class="features__item">
+              <img
+                class="features__icon"
+                src="./assets/icons/icon-deadline.svg"
+                alt=""
+                width="52"
+                height="52"
+              />
+              <h3 class="features__item-title">Точно в срок</h3>
+              <p class="features__item-text">
+                В договоре прописана моя ответственность за срок проекта. Если
+                просрочу — плачу неустойку.
+              </p>
+            </li>
+
+            <li class="features__item">
+              <img
+                class="features__icon"
+                src="./assets/icons/icon-agreement.svg"
+                alt=""
+                width="52"
+                height="52"
+              />
+              <h3 class="features__item-title">Ценник под вас</h3>
+              <p class="features__item-text">
+                Если у вас нетиповой проект, сделаю расчёт цены за работу и
+                объясню, как складывается цена.
+              </p>
+            </li>
+
+            <li class="features__item">
+              <img
+                class="features__icon"
+                src="./assets/icons/icon-steps.svg"
+                alt=""
+                width="52"
+                height="52"
+              />
+              <h3 class="features__item-title">Промежуточные итоги</h3>
+              <p class="features__item-text">
+                Показываю работу поэтапно, а не в последний момент перед крайним
+                сроком.
+              </p>
+            </li>
+
+            <li class="features__item">
+              <img
+                class="features__icon"
+                src="./assets/icons/icon-storage.svg"
+                alt=""
+                width="52"
+                height="52"
+              />
+              <h3 class="features__item-title">Хостинг и домен</h3>
+              <p class="features__item-text">
+                Если мы договорились о цене проекта, в неё входит всё: домен и
+                хостинг на год + SSL сертификат.
+              </p>
+            </li>
+
+            <li class="features__item">
+              <img
+                class="features__icon"
+                src="./assets/icons/icon-conversation.svg"
+                alt=""
+                width="52"
+                height="52"
+              />
+              <h3 class="features__item-title">Не брошу после сдачи</h3>
+              <p class="features__item-text">
+                Научу вас или вашего сотрудника пользоваться сайтом, запишу
+                видео-инструкции.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ─── PORTFOLIO ──────────────────────────────────────── -->
+      <section class="portfolio">
+        <div class="portfolio__inner container">
+          <h2 class="portfolio__title">Выполненные проекты</h2>
+          <ul class="portfolio__list">
+            <li class="portfolio__item">
+              <article class="card">
+                <img
+                  class="card__image"
+                  src="./assets/images/portfolio-1.png"
+                  alt="Проект 1"
+                  width="304"
+                  height="304"
+                />
+                <div class="card__overlay" aria-hidden="true"></div>
+                <div class="card__content">
+                  <h3 class="card__title">The curious corner of chamarel</h3>
+                  <a class="btn btn--red" href="#">Посмотреть</a>
+                </div>
+              </article>
+            </li>
+            <li class="portfolio__item">
+              <article class="card">
+                <img
+                  class="card__image"
+                  src="./assets/images/portfolio-2.png"
+                  alt="Проект 2"
+                  width="304"
+                  height="304"
+                />
+                <div class="card__overlay" aria-hidden="true"></div>
+                <div class="card__content">
+                  <h3 class="card__title">Gymkhana club golf course</h3>
+                  <a class="btn btn--red" href="#">Посмотреть</a>
+                </div>
+              </article>
+            </li>
+            <li class="portfolio__item">
+              <article class="card">
+                <img
+                  class="card__image"
+                  src="./assets/images/portfolio-3.png"
+                  alt="Проект 3"
+                  width="304"
+                  height="304"
+                />
+                <div class="card__overlay" aria-hidden="true"></div>
+                <div class="card__content">
+                  <h3 class="card__title">
+                    Tamarind falls hiking trip - full day
+                  </h3>
+                  <a class="btn btn--red" href="#">Посмотреть</a>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ─── GALLERY ────────────────────────────────────────── -->
+      <section class="gallery">
+        <div class="gallery__inner container">
+          <h2 class="gallery__title">Галерея</h2>
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <img
+                class="gallery__image"
+                src="./assets/images/gallery-01.png"
+                alt=""
+                width="224"
+                height="224"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                class="gallery__image"
+                src="./assets/images/gallery-02.png"
+                alt=""
+                width="224"
+                height="224"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                class="gallery__image"
+                src="./assets/images/gallery-03.png"
+                alt=""
+                width="224"
+                height="224"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                class="gallery__image"
+                src="./assets/images/gallery-04.png"
+                alt=""
+                width="224"
+                height="224"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                class="gallery__image"
+                src="./assets/images/gallery-05.png"
+                alt=""
+                width="224"
+                height="224"
+              />
+            </li>
+            <li class="gallery__item gallery__item--video">
+              <img
+                class="gallery__image"
+                src="./assets/images/gallery-06.png"
+                alt=""
+                width="224"
+                height="224"
+              />
+              <div class="gallery__video-info" aria-hidden="true">
+                <img
+                  class="gallery__play"
+                  src="./assets/icons/icon-play.svg"
+                  alt=""
+                  width="16"
+                  height="16"
+                />
+                <time class="gallery__timestamp">0:28</time>
+              </div>
+            </li>
+            <li class="gallery__item">
+              <img
+                class="gallery__image"
+                src="./assets/images/gallery-07.png"
+                alt=""
+                width="224"
+                height="224"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                class="gallery__image"
+                src="./assets/images/gallery-08.png"
+                alt=""
+                width="224"
+                height="224"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                class="gallery__image"
+                src="./assets/images/gallery-09.png"
+                alt=""
+                width="224"
+                height="224"
+              />
+            </li>
+            <li class="gallery__item">
+              <img
+                class="gallery__image"
+                src="./assets/images/gallery-10.png"
+                alt=""
+                width="224"
+                height="224"
+              />
+            </li>
+            <li class="gallery__item gallery__item--video">
+              <img
+                class="gallery__image"
+                src="./assets/images/gallery-11.png"
+                alt=""
+                width="224"
+                height="224"
+              />
+              <div class="gallery__video-info" aria-hidden="true">
+                <img
+                  class="gallery__play"
+                  src="./assets/icons/icon-play.svg"
+                  alt=""
+                  width="16"
+                  height="16"
+                />
+                <time class="gallery__timestamp">0:45</time>
+              </div>
+            </li>
+            <li class="gallery__item">
+              <img
+                class="gallery__image"
+                src="./assets/images/gallery-12.png"
+                alt=""
+                width="224"
+                height="224"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ─── CONTACTS ───────────────────────────────────────── -->
+      <section class="contacts" id="contacts">
+        <div class="contacts__inner container">
+          <h2 class="contacts__title">Свяжитесь со мной</h2>
+          <div class="contacts__body">
+            <form class="form" action="#" method="post">
+              <h3 class="form__title">Написать мне</h3>
+              <p class="form__subtitle">
+                Можете просто оставить заявку, я позвоню вам сегодня
+              </p>
+              <div class="form__fields">
+                <label class="visually-hidden" for="name">Ваше имя</label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Ваше имя"
+                  autocomplete="name"
+                  required
+                />
+
+                <label class="visually-hidden" for="phone">Ваш телефон</label>
+                <input
+                  class="form__input"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Ваш телефон"
+                  autocomplete="tel"
+                  required
+                />
+              </div>
+              <button class="btn btn--primary" type="submit">Отправить</button>
+              <p class="form__policy">
+                Нажимая кнопку, вы соглашаетесь с
+                <a class="form__policy-link" href="#"
+                  >политикой конфиденциальности</a
+                >
+              </p>
+            </form>
+
+            <div class="contacts__info">
+              <div class="contacts__group">
+                <h3 class="contacts__label">Телефон</h3>
+                <a class="contacts__value" href="tel:+79991234567"
+                  >+7 999 123 45 67</a
+                >
+              </div>
+              <div class="contacts__group">
+                <h3 class="contacts__label">Почта</h3>
+                <a class="contacts__value" href="mailto:ivanov@mail.ru"
+                  >ivanov@mail.ru</a
+                >
+              </div>
+              <div class="contacts__group">
+                <h3 class="contacts__label">Соцсети</h3>
+                <nav class="contacts__social" aria-label="Социальные сети">
+                  <a
+                    class="contacts__social-link"
+                    href="#"
+                    aria-label="GitHub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./assets/icons/social-github.svg"
+                      alt=""
+                      width="20"
+                      height="20"
+                    />
+                  </a>
+                  <a
+                    class="contacts__social-link"
+                    href="#"
+                    aria-label="Twitter"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./assets/icons/social-twitter.svg"
+                      alt=""
+                      width="20"
+                      height="16"
+                    />
+                  </a>
+                  <a
+                    class="contacts__social-link"
+                    href="#"
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./assets/icons/social-instagram.svg"
+                      alt=""
+                      width="20"
+                      height="20"
+                    />
+                  </a>
+                  <a
+                    class="contacts__social-link"
+                    href="#"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./assets/icons/social-facebook.svg"
+                      alt=""
+                      width="20"
+                      height="20"
+                    />
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
