@@ -3,12 +3,12 @@
 
 .card {
   position: relative;
+  height: 10.375rem;
+  border-radius: 0.375rem;
   overflow: hidden;
-  border-radius: 0.375rem; // 6px
-  height: 10.375rem; // 166px mobile
 
   &__image {
-    display: block; // убирает gap под inline img
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -26,32 +26,32 @@
 
   &__content {
     position: absolute;
-    left: 1rem; // 16px mobile
     right: 1rem;
     bottom: 1rem;
+    left: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem; // 16px между заголовком и кнопкой
+    gap: 1rem;
   }
 
   &__title {
-    @include mixins.fluid(font-size, 16, 18);
+    max-width: 9.438rem;
+    color: variables.$color-text;
     font-weight: 700;
     line-height: normal;
-    color: variables.$color-text;
-    max-width: 9.438rem;
+    @include mixins.fluid(font-size, 16, 18);
   }
 
   @include mixins.respond(desktop) {
-    height: 19rem; // 304px desktop
+    height: 19rem;
 
     &__content {
-      left: 2rem; // 32px desktop
       right: 2rem;
       bottom: 2rem;
+      left: 2rem;
     }
     &__title {
-      max-width: none;
+      max-width: 10.625rem;
       line-height: 155.556%;
     }
   }

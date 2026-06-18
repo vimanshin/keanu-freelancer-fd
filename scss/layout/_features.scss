@@ -2,81 +2,81 @@
 @use '../abstracts/mixins';
 
 .features {
-  background-color: variables.$color-bg-alt;
-  padding-top: 3rem; // 48px mobile
+  padding-top: 3rem;
   padding-bottom: 3rem;
+  background-color: variables.$color-bg-alt;
 
   &__title {
-    @include mixins.fluid(font-size, 19, 36);
     font-weight: 700;
     line-height: normal;
-    margin-bottom: 2rem; // 32px — между заголовком и списком
+    @include mixins.fluid(font-size, 19, 36);
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 2rem; // 32px между элементами
+    gap: 2rem;
+    margin-top: 2rem;
     list-style: none;
   }
 
   &__item {
     display: grid;
-    grid-template-columns: 2rem 1fr; // 32px иконка | остаток
-    column-gap: 1rem; // 16px между иконкой и текстом
-    align-items: start; // иконка у верхнего края
+    grid-template-columns: 2rem 1fr;
+    align-items: start;
+    column-gap: 1rem;
   }
 
   &__icon {
-    grid-row: 1 / span 2; // перекрывает строку h3 + строку p
-    width: 2rem; // 32px mobile
+    grid-row: 1 / span 2;
+    width: 2rem;
     height: auto;
   }
 
   &__item-title {
-    @include mixins.fluid(font-size, 18, 24);
     font-weight: 700;
     line-height: 155.556%;
+    @include mixins.fluid(font-size, 18, 24);
   }
 
   &__item-text {
-    @include mixins.fluid(font-size, 12, 16);
+    margin-top: 0.5rem;
     line-height: 175%;
-    margin-top: 0.5rem; // 8px — между заголовком и описанием
+    @include mixins.fluid(font-size, 12, 16);
   }
 
   @include mixins.respond(desktop) {
-    padding-top: 5.5rem; // 88px desktop
-    padding-bottom: 5.5rem;
+    padding-top: 5.5rem;
+    padding-bottom: 5.9rem;
 
     &__title {
       line-height: 116.667%;
-      margin-bottom: 3rem; // 48px desktop
     }
 
     &__list {
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 3rem 1rem; // row-gap 48px, col-gap 16px
+      gap: 3rem 1rem;
+      margin-top: 3rem;
     }
 
     &__item {
       display: flex;
       flex-direction: column;
-      width: 19rem; // 304px (3 × 304 + 2 × 16 = 944px ✓)
+      width: 19rem;
     }
 
     &__icon {
-      width: 3.25rem; // 52px desktop
+      width: 3.25rem;
     }
 
     &__item-title {
+      margin-top: 1.25rem;
       line-height: 116.667%;
-      margin-top: 1.25rem; // 20px — иконка → заголовок
     }
 
     &__item-text {
-      margin-top: 1rem; // 16px — заголовок → описание
+      margin-top: 1rem;
     }
   }
 }

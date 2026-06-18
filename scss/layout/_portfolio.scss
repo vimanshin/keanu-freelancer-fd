@@ -6,16 +6,16 @@
   padding-bottom: 3rem;
 
   &__title {
-    @include mixins.fluid(font-size, 19, 36);
     font-weight: 700;
     line-height: normal;
+    @include mixins.fluid(font-size, 19, 36);
   }
 
   &__list {
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem; // 32px mobile
+    gap: 2rem;
+    margin-top: 2rem;
     list-style: none;
   }
 
@@ -25,17 +25,16 @@
 
     &__title {
       line-height: 116.667%;
-      margin-bottom: 3rem; // 48px — gap до списка на desktop
     }
 
     &__list {
       flex-direction: row;
-      gap: 1rem; // 16px desktop
-      margin-top: 0; // сбрасываем mobile margin-top, теперь gap через title
+      gap: 1rem;
+      margin-top: 3rem;
     }
 
     &__item {
-      width: 19rem; // 304px (3 × 304 + 2 × 16 = 944px ✓)
+      width: 19rem;
     }
   }
 }

@@ -7,17 +7,17 @@
   padding-bottom: 3rem;
 
   &__title {
-    @include mixins.fluid(font-size, 19, 36);
     font-weight: 700;
     line-height: normal;
     text-align: center;
+    @include mixins.fluid(font-size, 19, 36);
   }
 
   &__body {
-    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem; // форма → инфо на мобиле
+    gap: 3rem;
+    margin-top: 1.5rem;
   }
 
   // ── Инфо-колонка ─────────────────────────────────────────────
@@ -29,30 +29,38 @@
   &__group {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.7rem;
   }
 
   &__group + &__group {
-    margin-top: 1.85rem;
+    margin-top: 1.7rem;
   }
 
-  &__group + &__group + &__group{
+  &__group + &__group + &__group {
     margin-top: 2.5rem;
   }
 
   &__label {
     margin-top: 0.25rem;
-    @include mixins.fluid(font-size, 18, 24);
     font-weight: 700;
     line-height: normal;
+    @include mixins.fluid(font-size, 18, 24);
   }
 
   &__value {
-    margin-top: 0.31rem;
-    @include mixins.fluid(font-size, 14, 16);
-    line-height: normal;
     color: variables.$color-text;
+    line-height: normal;
     text-decoration: none;
+    @include mixins.fluid(font-size, 14, 16);
+  }
+
+  &__group--social &__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 
   &__social {
@@ -71,24 +79,71 @@
     }
   }
 
+  &__policy-link {
+    margin-top: 1.2rem;
+    color: variables.$color-muted;
+    font-size: 0.9375rem;
+    text-decoration: underline;
+  }
+
   @include mixins.respond(desktop) {
     padding-top: 5.5rem;
     padding-bottom: 5.5rem;
 
     &__title {
       line-height: 116.667%;
-      margin-bottom: 3rem;
+      text-align: left;
     }
 
     &__body {
       flex-direction: row;
-      align-items: flex-start;
-      gap: 6rem; // 96px между формой и инфо
+      align-items: stretch;
+      gap: 6rem;
+      margin-top: 3rem;
     }
 
     &__info {
-      width: 24rem; // 384px
-      gap: 2rem; // 32px между группами
+      display: grid;
+      grid-template-columns: 9rem 1fr 9rem;
+      grid-template-rows: auto auto 1fr;
+      row-gap: 2.1rem;
+      width: 24rem;
+    }
+
+    &__group {
+      gap: 0.9rem;
+    }
+
+    &__group:nth-child(2) {
+      grid-column: 3;
+    }
+
+    &__group + &__group,
+    &__group + &__group + &__group {
+      margin-top: 0;
+    }
+
+    &__label {
+      margin-top: 0;
+      line-height: 116.667%;
+    }
+
+    &__group--social {
+      grid-column: 1 / -1;
+    }
+
+    &__group--social &__label {
+      position: static;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
+    }
+
+    &__value {
+      margin-top: 0;
+      line-height: 175%;
     }
 
     &__social {
@@ -98,64 +153,69 @@
     &__social-link img {
       width: 1.25rem;
     }
+
+    &__policy-link {
+      grid-column: 1 / -1;
+      align-self: end;
+      margin-bottom: -0.5rem;
+      font-size: 0.9375rem;
+    }
   }
 }
 
 // ── Форма ────────────────────────────────────────────────────────
 .form {
-  background-color: #ffffff;
-  border-radius: 0.375rem; // 6px
-  box-shadow: -4px 4px 0 0 variables.$color-form-shadow;
-  padding: 2rem 1.125rem;
   display: flex;
   flex-direction: column;
+  border-radius: 0.375rem;
+  padding: 2rem 1.125rem;
+  box-shadow: -5px 5px 0 0 variables.$color-form-shadow;
+  background-color: #ffffff;
 
   &__title {
-    @include mixins.fluid(font-size, 15, 18);
-    font-weight: 700;
+    margin-top: 0.25rem;
     color: variables.$color-black;
+    font-weight: 700;
     line-height: 140%;
     text-align: center;
-    margin-top: 0.25rem;
+    @include mixins.fluid(font-size, 15, 18);
   }
 
   &__fields {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    margin-top: 1.25rem;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
   }
 
   &__field {
     position: relative;
-    margin-top: 0.25rem;
   }
 
   &__field-icon {
     position: absolute;
-    left: 1rem;
     top: 50%;
-    transform: translateY(-50%); // центрируем вертикально
+    left: 1rem;
     width: 1rem;
     height: auto;
-    pointer-events: none; // иконка не перехватывает клик
+    transform: translateY(-50%);
+    pointer-events: none;
   }
 
   &__input {
     display: block;
     width: 100%;
-    height: 3rem; // 48px mobile
-    background-color: variables.$color-surface;
+    height: 3rem;
     border: none;
-    border-radius: 0.3125rem; // 5px
-    padding: 0 2rem; // вертикальный padding не нужен при фиксированной height
+    border-radius: 0.3125rem;
+    padding: 0 2rem 0 2.75rem;
+    color: variables.$color-text-dark;
     font-family: variables.$font-base;
     font-size: 0.875rem;
-    color: variables.$color-text-dark;
+    background-color: variables.$color-surface;
     appearance: none;
 
     &::placeholder {
-      padding-left: 0.75rem;
       color: variables.$color-muted;
     }
 
@@ -169,36 +229,31 @@
     margin-top: 2rem;
   }
 
-  &__policy {
-    margin-top: 0.75rem;
-    font-size: 1.125rem; // 18px mobile
-    color: variables.$color-muted;
-    text-align: center;
-  }
-
-  &__policy-link {
-    color: variables.$color-muted;
-    text-decoration: underline;
-  }
-
   @include mixins.respond(desktop) {
-    width: 29rem; // 464px
-    padding: 2.375rem 2rem; // 38px × 32px
+    width: 29rem;
+    padding: 2.375rem 2rem;
 
     &__title {
-      line-height: 116.667%;
+      margin-top: 0;
+      line-height: 155.556%;
+    }
+
+    &__fields {
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    &__field-icon {
+      left: 2rem;
     }
 
     &__input {
-      height: 4.375rem; // 70px
+      height: 4.375rem;
+      padding: 0 2rem 0 3.875rem;
     }
 
     .btn--primary {
-      margin-top: 2rem; // уточни в Figma
-    }
-
-    &__policy {
-      font-size: 0.9375rem; // 15px
+      margin-top: 2rem;
     }
   }
 }

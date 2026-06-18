@@ -85,13 +85,21 @@
       <!-- ─── HERO ───────────────────────────────────────────── -->
       <section class="hero">
         <div class="hero__inner container">
-          <img
-            class="hero__avatar"
-            src="./assets/images/hero-portrait.svg"
-            alt="Петр Федоров — фрилансер"
-            width="110"
-            height="110"
-          />
+          <picture>
+            <source
+              media="(min-width: 1280px)"
+              srcset="./assets/images/hero-portrait-desktop.svg"
+              width="384"
+              height="384"
+            />
+            <img
+              class="hero__avatar"
+              src="./assets/images/hero-portrait.svg"
+              alt="Петр Федоров — фрилансер"
+              width="110"
+              height="110"
+            />
+          </picture>
           <div class="hero__text">
             <div class="hero__name-block">
               <span class="hero__label">Фрилансер</span>
@@ -410,19 +418,45 @@
               <div class="form__fields">
                 <label class="visually-hidden" for="name">Ваше имя</label>
                 <div class="form__field">
-                  <img class="form__field-icon" src="./assets/icons/icon-user.svg" alt="" aria-hidden="true" />
-                  <input class="form__input" type="text" id="name" name="name"
-                         placeholder="Ваше имя" autocomplete="name" required />
+                  <img
+                    class="form__field-icon"
+                    src="./assets/icons/icon-user.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <input
+                    class="form__input"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Ваше имя"
+                    autocomplete="name"
+                    required
+                  />
                 </div>
-              
+
                 <label class="visually-hidden" for="phone">Ваш телефон</label>
                 <div class="form__field">
-                  <img class="form__field-icon" src="./assets/icons/icon-phone.svg" alt="" aria-hidden="true" />
-                  <input class="form__input" type="tel" id="phone" name="phone"
-                         placeholder="Ваш телефон" autocomplete="tel" required />
+                  <img
+                    class="form__field-icon"
+                    src="./assets/icons/icon-phone.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <input
+                    class="form__input"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Ваш телефон"
+                    autocomplete="tel"
+                    required
+                  />
                 </div>
               </div>
-              <button class="btn btn--primary" type="submit">Бесплатная консультация</button>
+              <button class="btn btn--primary" type="submit">
+                Бесплатная консультация
+              </button>
             </form>
 
             <div class="contacts__info">
@@ -438,8 +472,8 @@
                   >ivanov@mail.ru</a
                 >
               </div>
-              <div class="contacts__group">
-                <h3 class="contacts__label visually-hidden">Соцсети</h3>
+              <div class="contacts__group contacts__group--social">
+                <h3 class="contacts__label">Соцсети</h3>
                 <nav class="contacts__social" aria-label="Социальные сети">
                   <a
                     class="contacts__social-link"
@@ -499,6 +533,9 @@
                   </a>
                 </nav>
               </div>
+              <a class="contacts__policy-link" href="#">
+                Политика конфиденциальности
+              </a>
             </div>
           </div>
         </div>
